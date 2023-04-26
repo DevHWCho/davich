@@ -1,0 +1,283 @@
+/* howto.css */
+
+/* ############################## spot ############################## */
+.spot_inner {position: relative; margin: 0 auto; width: 73vw; height: 100%;}
+.spot_txt {position: absolute; bottom: 0; margin-bottom: 70px;}
+.spot_txt>h2 {margin-bottom: 13px; font-size: 60px; font-weight: 700; color: #fff; letter-spacing: -1.5px; word-break: keep-all;}
+.spot_txt>p {font-size: 18px; color: #fff; letter-spacing: -0.4px; word-break: keep-all;}
+
+
+/* ############################## container ############################## */
+/* content1 - 다비치만의 성공전략 노하우 */
+.content1 {margin-bottom: 200px;}
+.content1>div>h3 {margin: 85px 60px; font-size: 35px; font-weight: 600; letter-spacing: -0.9px; text-align: center; word-break: keep-all;}
+
+/* 원형 컨텐츠 */
+.circle_wrap {display: flex; flex-wrap: wrap; justify-content: center;}
+/* .circle_section */
+.circle_section > strong {position: relative; margin-bottom: 170px; display: flex; justify-content: center; align-items: center; width: 350px; height: 350px; box-sizing: border-box; border: 1px solid #0056AA; border-radius: 50%; color: #0056AA; font-size: 25px; font-weight: 600; text-align: center; line-height: 1.8; letter-spacing: -0.8px; word-break: keep-all;}
+.circle_section > strong::after {position: absolute; bottom: -100px; content: ''; width: 1px; height: 100px; background-color: #222;}
+.circle_section > span {display: block; text-align: center; line-height: 1.7; letter-spacing: -0.5px;}
+
+/* 원형 위치 조정 */
+.circle_section:nth-of-type(1) > strong {transform: translateX(20px);}
+.circle_section:nth-of-type(3) > strong {transform: translateX(-20px);}
+.circle_section:nth-of-type(1) > span {transform: translateX(20px);}
+.circle_section:nth-of-type(3) > span {transform: translateX(-20px);}
+
+/* 페이드인 */
+.content1.on>div>h3 {animation: fadein 1.2s ease 0.3s;}
+@keyframes fadein {
+  0%{transform: translateY(80px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
+}
+.content1.on .circle_wrap>div:first-child {animation: fadein 2s ease 0.6s;}
+.content1.on .circle_wrap>div:nth-child(2) {animation: fadein 2s ease 1.2s;}
+.content1.on .circle_wrap>div:last-child {animation: fadein 2s ease 1.8s;}
+
+
+/* content2 - 점포모델 */
+/* 컨텐츠 문구 */
+.content2 {position: relative;}
+/* .content2::after{position: absolute; left: 0; top: 0; width: calc(13.5vw - calc(50vw - 50%)); height: 100%; background-color: pink; content: '';} */
+.content2 > .content_inner {overflow: hidden; width: 86.5vw; margin-left: 13.5vw;}
+.content2 .section1 {position: relative; padding-bottom: 125px; display: flex; flex-direction: column;  height: 600px; font-family: 'Noto Sans KR', sans-serif;}
+.content2 .section1 > h3 {margin: 140px 0 40px; font-size: 35px; font-weight: 600; letter-spacing: -1px;}
+.content2 .section1 > p {display: flex; flex-direction: column; margin-bottom: 100px; line-height: 1.7; letter-spacing: -0.3px; word-break: keep-all;}
+
+/* 페이드인 */
+.content2.on .section1>h3 {animation: fadein2 1.5s ease 0.3s;}
+@keyframes fadein2 {
+  0%{transform: translateY(30px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
+}
+.content2.on .section1>p {animation: fadein2 1.5s ease 0.6s;}
+
+/* 선택버튼 */
+.model_select>ul {display: flex;} 
+.model_select>ul>li {margin-right: 28px;}
+.model_select>ul>li>a {position: relative;}
+.model_select>ul>li.on>a {color: #0056AA;}
+.model_select>ul>li:nth-child(1)>a:after {position: absolute; display: block; content: ''; right: -25%; top: 22%; width: 1px; height: 18px; background-color: #dedede;}
+
+/* 오른쪽 매장 사진/배경 */
+.store_model {position: absolute; right: -45.6%; width: 100%; height: 100%;}
+.store_model::after {display: block; clear: both; content: '';}
+.store_model>ul>li {display: none; position: absolute; left: 0; top: 6.2%;}
+.store_model>ul>li.on {display: block;}
+.store_model>ul>li::after {z-index: -1; position: absolute; content: ''; top: -45px; right: -21.3%; width: 977px; height: 555px; background: #0056AA;  transform: skewX(30deg);}
+
+/* section2 - 오토배너 파트 */
+.section2>ul {display: flex; transition: all 1s ease 0s;}
+.section2>ul>li {margin-right: 40px; text-align: center;}
+.section2>ul>li>p {margin-top: 20px; font-size: 22px; font-weight: 500;}
+@keyframes move_left {
+  0%{transform: translateX(0px);}
+  100%{transform: translateX(-480px);}
+  /* 100%{transform: translateX(-960px);} */
+}
+
+/* content3 - 개설절차 */
+.content3 {background: #f9f9f9; margin-top: 150px; padding: 100px 0; box-sizing: border-box;}
+.content3 > .content_inner {overflow: hidden; margin: 0 auto; width: 73vw;}
+.content3 > div > h3 {font-size: 35px; font-weight: 600; letter-spacing: -0.5px;}
+
+/* section1 텍스트 */
+.con3_section1 {display: flex; justify-content: space-between;}
+.con3_section1>section {flex: 1; margin-top: 70px; padding: 0 70px 70px 0;}
+.con3_section1>section>h4 {font-size: 25px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; letter-spacing: -0.7px;}
+.con3_section1>section>p {margin-top: 26px; line-height: 1.6; letter-spacing: -0.5px; word-break: keep-all;}
+
+/* section2 개설절차 원형 */
+.con3_section2 {display: flex; justify-content: space-between; flex-wrap: wrap; column-gap: 50px;}
+.con3_section2>section {position: relative;}
+.con3_section2>section.space_section {opacity: 0;}
+
+.con3_section2>section>p {position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 30px; width: 218px; height: 218px; border: 1px solid #0056AA; border-radius: 50%; text-align: center; font-size: 22px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; color:#0056AA; letter-spacing: -0.4px; line-height: 1.4;}
+.con3_section2>section::after {position: absolute; top: 100px; right: -8.1vmin; width: 8.1vmin; height: 21px; background: url(../img/icon-arrow.png) no-repeat 100% 0; content: '';}
+.con3_section2>section:nth-of-type(9)::after {display: none;}
+.con3_section2>section>span {display: flex; justify-content: center; margin-bottom: 70px; font-family: 'Noto Sans KR', sans-serif; text-align: center; line-height: 1.65; letter-spacing: -0.2px;}
+
+/* 페이드인 */
+.content3.on > div > h3 {animation: fadein2 2s ease 0.3s;}
+.content3.on .con3_section1>section:first-child {animation: fadein 2s ease 0.6s;}
+.content3.on .con3_section1>section:last-child {animation: fadein 2s ease 0.9s;}
+
+.content3.on .con3_section2>section {animation: fadein 2s ease 1.2s;}
+.content3.on .con3_section2>section:last-child {animation: none;}
+
+/* content4 오픈 가능 지역 */
+.content4 > .content_inner {margin: 0 auto; width: 73vw;}
+.text_wrap {margin: 0 auto; padding: 94px 0 70px; text-align: center; box-sizing: border-box;}
+.text_wrap>h3 {margin-bottom: 115px; font-size: 35px; font-weight: 600; letter-spacing: -0.7px;}
+.text_wrap>p {font-size: 25px; font-weight: 600; letter-spacing: -0.7px; word-break: keep-all;}
+
+/* 아이콘 박스 */
+.icon_wrap {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.icon_wrap>div {display: flex; flex: 1; flex-direction: column; align-items: center; margin-bottom: 40px;}
+.icon_wrap>div>img {margin-bottom: 20px; width: 99px; height: 94px; object-fit: contain;}
+.icon_wrap>div:nth-of-type(2)>img {width: 107px; height: 94px;}
+.icon_wrap>div>p {margin-bottom: 20px; font-size: 22px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; color: #0056AA; text-align: center; letter-spacing: -0.5px; word-break: keep-all;}
+.icon_wrap>div>span {font-family: 'Noto Sans KR', sans-serif; text-align: center; line-height: 1.7; letter-spacing: -0.5px;word-break: keep-all;}
+
+/* 가입자격/요건 */
+.text_box {display: flex; margin-top: 60px; gap: 40px;}
+.text_box>div {flex: 1; margin-bottom: 130px; padding: 50px 50px 40px; border: 1px solid #ccc; box-sizing: border-box;}
+.text_box>div>h4 {margin-bottom: 25px; font-size: 25px; font-weight: 600; letter-spacing: -0.7px;}
+.text_box>div>p {font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; letter-spacing: -0.2px; word-break: keep-all;}
+
+/* 페이드인 */
+.content4.on .text_wrap>h3 {animation: fadein 2s ease 0s;}
+.content4.on .text_wrap>p {animation: fadein 2.2s ease 0.2s;}
+.content4.on .icon_wrap>div:nth-of-type(1) {animation: fadein 2.4s ease 0.4s;}
+.content4.on .icon_wrap>div:nth-of-type(2) {animation: fadein 2.4s ease 0.6s;}
+.content4.on .icon_wrap>div:nth-of-type(3) {animation: fadein 2.4s ease 0.8s;}
+.content4.on .icon_wrap>div:nth-of-type(4) {animation: fadein 2.4s ease 1.0s;}
+.content4.on .text_box>div:first-child {animation: fadein 1.5s ease 0.9s;}
+.content4.on .text_box>div:last-child {animation: fadein 1.5s ease 1.2s;}
+
+/* 지역 선택 - 대분류 */
+.location_select>ul {display: flex; justify-content: center; border-bottom: 1px solid #ccc;}
+.location_select>ul>li {width: 200px;}
+.location_select>ul>li>a {display: block; position: relative; padding: 25px 60px; font-size: 20px; font-weight: 500; text-align: center;}
+.location_select>ul>li>a.on {color: #0056AA;}
+.location_select>ul>li>a::after {position: absolute; left: 0; width: 1px; height: 30px; background: #edeff5; content: '';}
+.location_select>ul>li:first-child>a::after {display: none;}
+
+/* 지역 선택 - 테이블 레이아웃/타이틀 */
+.content5>.content_inner {width: 73vw; margin: 0 auto;}
+.content5>div>div {margin-top: 70px; margin-bottom: 70px;}
+.content5>div>div>h4 {margin-bottom: 35px; font-size: 25px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; letter-spacing: -0.5px;}
+
+/* 지역 선택 - 테이블 */
+.city>table>tbody {border-top: 1px solid #222; border-bottom: 1px solid #222;}
+.city>table>tbody>tr {display: flex; width: 73vw; border-bottom: 1px solid #ccc;}
+.city>table>tbody>tr:last-of-type {border-bottom: none;}
+.city>table>tbody>tr>th {display: flex; justify-content: center; align-items: center; min-width: 80px; padding: 18px 40px; border-left: 1px solid #ccc; border-right: 1px solid #ccc; background: #f9f9f9; font-weight: 500; letter-spacing: -0.5px; text-align: center;}
+.city>table>tbody>tr>th:first-child {border-left: 0;}
+.city>table>tbody>tr>td {display: flex; align-items: center; width: 500px; padding: 18px 20px; word-break:keep-all;}
+
+/* 가맹점 개설문의 버튼 */
+.content5 {position: relative; padding-bottom: 300px;}
+.con5_inquiry_btn {position: absolute; bottom: 180px; left: 50%; transform: translateX(-50%);}
+.con5_inquiry_btn > a {overflow: hidden; position: relative; display: block; width: 200px; height: 50px; border: 1px solid #000; font-size: 17px; text-align: center; line-height: 50px; box-sizing: border-box;}
+.con5_inquiry_btn > a::after {z-index: -1; position: absolute; left: -130%; width: 240px; height: 100%; background-color: #0056AA; content: ''; transform: skew(-35deg); transition: all 0.3s ease 0s;}
+.con5_inquiry_btn > a:hover {color: #fff;}
+.con5_inquiry_btn > a:hover::after {left: -10%;}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 1410px) {
+  .con3_section2>section.space_section {display: none;}
+  .content5 {padding-bottom: 200px;}
+  .con5_inquiry_btn {bottom: 120px;}
+}
+
+@media screen and (max-width: 1110px) {
+  /* 다비치만의 성공전략 노하우 */
+  .content1 {margin-bottom: 100px;}
+
+  /* 원형 컨텐츠 */
+  .circle_section > strong {margin-bottom: 40px;}
+  .circle_section > strong::after {display: none;}
+  .circle_section > span {margin-bottom: 50px;}
+}
+@media screen and (max-width: 1068px) {
+  /* 원형 위치 조정 */
+  .circle_wrap {justify-content: space-around;}
+  .circle_section:nth-of-type(1) > strong {transform: translateX(0px);}
+  .circle_section:nth-of-type(3) > strong {transform: translateX(0px);}
+  .circle_section:nth-of-type(1) > span {transform: translateX(0px);}
+  .circle_section:nth-of-type(3) > span {transform: translateX(0px);}
+}
+
+@media screen and (max-width: 1000px) {
+  /* 점포모델 */
+  .store_model {bottom: -26%; left: 15%; transform: scale(0.6);}
+
+  /* 지역 선택 - 대분류 */
+  .location_select>ul>li>a {padding: 25px 10px;}
+
+  /* 지역 선택 - 테이블 */
+  .city>table>tbody>tr {display: flex; flex-wrap: wrap;}
+  .city>table>tbody>tr>th:nth-of-type(odd) {border-bottom: 1px solid #ccc;}
+  .city>table>tbody>tr>th:nth-of-type(even) {border-left: 0;}
+  .city>table>tbody>tr>td {flex-grow: 1; width: 369px;}
+  .city>table>tbody>tr>td:nth-of-type(odd) {border-bottom: 1px solid #ccc;}
+}
+@media screen and (max-width: 780px) {
+  /* 지역 선택 - 테이블 */
+  .city>table>tbody>tr>td {width: 300px;}
+}
+@media screen and (max-width: 768px) {
+   /* 원형 컨텐츠 */
+  .circle_section > strong {width: 250px; height: 250px;}
+
+  /* 오픈 가능 지역 */
+  .text_wrap>p {display: flex; flex-direction: column;}
+  .icon_wrap>div {min-width: 160px;}
+  .city>table>tbody>tr>th {width: 100px; padding: 18px 10px;}
+  .city>table>tbody>tr>td {width: 279px;}
+
+  /* 개설 절차 */
+  /* section1 */
+  .con3_section1 {display: flex; flex-direction: column;}
+  .con3_section1>section {margin-top: 50px; padding-bottom: 20px;}
+  .con3_section1>section:last-child {margin-top: 20px; margin-bottom: 50px;}
+  .con3_section1>section>p {font-size: 1.6rem;}
+
+  /* section2 */
+  #container .con3_section2>section>p {width: 150px; height: 150px;}
+  .con3_section2>section>span {margin-bottom: 50px; font-size: 1.3rem;}
+  .con3_section2>section:nth-child(9)>span {margin-bottom: 0;}
+  .con3_section2>section::after {top: 67px;}
+
+  /* 가입자격/요건 */
+  .text_box {display: flex; flex-direction: column;}
+  .text_box>div {margin-bottom: 20px; padding: 30px;}
+  .text_box>div>p {font-size: 1.6rem;}
+
+  /* 지역 선택 - 대분류 */
+  .location_select>ul>li:first-child {width: 140px;}
+  .location_select>ul>li:first-child>a {padding: 25px 5px;}
+}
+
+@media screen and (max-width: 605px) {
+  /* 점포모델 */
+  .content2 .section1 > p {display: inline;}
+  .model_select>ul>li>a {position: relative; top: -300%;}
+  .store_model {bottom: -30%; left: -25%; transform: scale(0.5);}
+
+  /* 오픈 가능 지역 */
+  .city>table>tbody>tr>th {width: 20px; padding: 18px 0px;}
+  .city>table>tbody>tr>td {width: 240px;}
+}
+
+@media screen and (max-width: 530px) {
+  /* 다비치만의 성공전략 노하우 */
+  .content1 {margin-bottom: 40px;}
+  .circle_section > strong {width: 210px; height: 210px; font-size: 2.0rem;}
+  .circle_section:first-child > strong {margin: 60px; margin-top: 0;}
+}
+
+@media screen and (max-width: 450px) {
+  /* 점포모델 */
+  .store_model {bottom: -35%; left: -25%; transform: scale(0.4);}
+
+  /* content3 - 개설절차 */
+  /* section1 텍스트 */
+  .con3_section1>section {padding-right: 0px;}
+
+  /* section2 개설절차 원형 */
+  .con3_section2 {column-gap: 20px;}
+  #container .con3_section2>section>p {width: 120px; height: 120px; font-size: 1.8rem;}
+  .con3_section2>section::after {top: 50px;}
+  .con3_section2>section>span {display: inline; width: 120px; letter-spacing: -1.8px;}
+
+  /* 오픈 가능 지역 */
+  .city>table>tbody>tr>td {flex-grow: 1; width: 110px;}
+
+  /* 지역 선택 - 대분류 */
+  .location_select>ul>li>a {font-size: 1.6rem;}
+}
+
+/* .location {display: none;} */

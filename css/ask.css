@@ -1,0 +1,178 @@
+/* ask.css */
+
+/* ############################## spot ############################## */
+.spot_inner {position: relative; margin: 0 auto; width: 73vw; height: 100%;}
+.spot_txt {position: absolute; bottom: 0; margin-bottom: 70px;}
+.spot_txt>h2 {margin-bottom: 13px; font-size: 60px; font-weight: 700; color: #fff; letter-spacing: -1.5px;}
+.spot_txt>p {font-size: 18px; color: #fff; letter-spacing: -0.4px; word-break: keep-all;}
+
+
+/* ############################## container ############################## */
+.content {margin: 0 auto; width: 73vw; height: 100%;}
+.tel_section {overflow: hidden; position: relative; height: 100%; text-align: center;}
+.tel_section>.division {margin-bottom: 120px; padding-top: 85px; display: flex; justify-content: space-between; position: relative; height: 100%; box-sizing: border-box;}
+
+/* 파란 원형 전화번호 */
+.tel_circle {position: relative; width: 350px; height: 350px; border-radius: 50%; background: #0056AA;}
+.tel_circle::after {position: absolute; left: 100%; top: 50%; transform: translateY(-50%); content: ''; width: 280px; border: 1px dashed #0056AA;}
+.tel_circle>div {position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(-50%,-50%); font-family: 'Noto Sans KR', sans-serif; letter-spacing: -1px; line-height: 1;}
+#container .tel_circle>div>strong {margin-bottom: 20px;display: block; font-size: 40px; font-weight: 700;  color: #fff;}
+.tel_circle>div>p {color: #fff; letter-spacing: -0.5px; line-height: 30px;}
+
+/* ARS 테이블 */
+.ars_table {width: 48%;}
+.ars_table tbody th {width: 150px; border-top: 1px solid #0056AA; padding: 35px 0; font-size: 22px; font-family: 'Noto Sans KR', sans-serif; font-weight: 700; letter-spacing: -0.35px; color: #0056AA;}
+.ars_table tbody td {width: 700px; border-top: 1px solid #ccc; text-align: left; letter-spacing: -0.45px;}
+.ars_table tbody th:last-of-type {border-bottom: 1px solid #0056AA;}
+.ars_table tbody td:last-of-type {border-bottom: 1px solid #ccc;}
+
+/* 온라인 문의 */
+.content .content_inner h3 {font-size: 35px; font-weight: 600; letter-spacing: -1px; margin-bottom: 10px;}
+.content .content_inner p {letter-spacing: -0.5px;}
+.inquiry_content {margin: 140px 0 70px; width: 100%; display: flex;}
+.inquiry_content>h4 {width: 18%; min-width: 200px; font-size: 24px; font-weight: 600;}
+/* .inquiry_content>div {width: 82%; border-top: 1px solid #222;} */
+
+/* 왼쪽 타이틀 */
+.inquiry_form ul {display: flex;}
+.inquiry_form ul li:first-of-type {min-width: 200px; height: 70px; font-size: 20px; font-weight: 500; line-height: 60px; letter-spacing: -0.5px;}
+.inquiry_form ul li:first-of-type strong {font-weight: 500;}
+.inquiry_form ul li:first-of-type span {margin-left: 3px; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; color: #00adef; vertical-align: 5%;}
+
+.inquiry_form ul:first-child li:first-of-type {border-top: 1px solid #222;}
+.inquiry_form ul:last-of-type li:first-child {height: 60px;}
+
+/* 페이드인 */
+.tel_section {animation: fadein 1.2s ease 0.3s;}
+@keyframes fadein {
+  0%{transform: translateY(80px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
+}
+.content .content_inner h3,.content .content_inner p {animation: fadein 2s ease 0.6s;}
+.inquiry_content>h4, .inquiry_form {animation: fadein 2s ease 1.0s;}
+.agreement {animation: fadein 2s ease 1.4s;}
+
+/* input 관련 */
+.inquiry_form ul li select, .inquiry_form ul li input, .inquiry_form ul li textarea {border: 0; height: 70px; font-size: 18px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; letter-spacing: -1px;}
+.inquiry_form ul li textarea {padding-top: 18px; height: 180px; resize: vertical; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+.content .inquiry_form ul li input::placeholder, .content .inquiry_form ul li textarea::placeholder {font-family: 'Noto Sans KR', sans-serif; font-weight: 400; color: #ccc;}
+.content .inquiry_form ul li select:focus, .content .inquiry_form ul li input:focus, .content .inquiry_form ul li textarea:focus {outline: none;}
+
+/* 구분선 */
+.inquiry_form ul:nth-of-type(1) li:nth-child(2) > select {width: 49.5vw; border-top: 1px solid #222; border-bottom: 1px solid #ccc;}
+.inquiry_form ul:nth-of-type(2) li:nth-child(2) {width: 49.5vw; border-bottom: 1px solid #ccc;}
+.inquiry_form ul:nth-of-type(3) li:nth-child(2) {width: 49.5vw; border-bottom: 1px solid #ccc;}
+.inquiry_form ul:nth-of-type(4) li:nth-child(2) {width: 49.5vw; border-bottom: 1px solid #ccc;}
+
+/* 구분 */
+.inquiry_form ul:nth-of-type(1) select {font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+
+/* 휴대폰 */
+.inquiry_form ul:nth-of-type(3) li {display: flex; justify-content: space-between; align-items: center;}
+.inquiry_form ul:nth-of-type(3) input[type="text"] {width: 42vw;}
+.inquiry_form ul:nth-of-type(3) a {display: inline-block; padding: 18px 20px; min-width: 135px; font-size: 16px; color: #ccc; background: #f9f9f9; border: 1px solid #ccc; box-sizing: border-box;}
+
+/* 이메일 */
+.email_form {display: flex; align-items: center; flex-wrap: wrap;}
+.inquiry_form ul:nth-of-type(4) li:nth-child(2)>input[type="email"] {min-width: 20rem; width: 18vw;}
+.inquiry_form ul:nth-of-type(4) li:nth-child(2)>input[type="text"] {width: 16vw; vertical-align: baseline;}
+.inquiry_form ul:nth-of-type(4) li:nth-child(2)>select {width: 13.5vw; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+
+/* 내용 */
+.inquiry_form ul:nth-of-type(5) textarea {margin-bottom: 15px; /*width: 935px;*/ width: 49.5vw; border-bottom: 1px solid #ccc;}
+
+/* 파일첨부 */
+.btn_align>div {display: flex; align-items: center;}
+#container .attFile {width: 36.5vw; height: 60px; text-indent: 20px;}
+.attBtn {display: inline-block; width: 140px; height: 60px; background: #fff; font-size: 16px; font-weight: 500; border: 1px solid #222; text-align: center; line-height: 60px;}
+#container .btn_align>p {margin-top: 15px; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; letter-spacing: 0.3px; word-break: keep-all;}
+
+/* 개인정보 수집동의 */
+.agreement {display: flex; width: 100%;}
+.agreement>h4 {width: 18%; min-width: 200px; font-size: 24px; font-weight: 600; letter-spacing: -0.5px;}
+
+/* 개인정보 내용 */
+.agree_txt {display: flex; flex-direction: column;}
+.agree_txt>textarea {width: 60vw; height: 180px; resize: none; border: 0; border-bottom: 1px solid #ccc; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; color: #888; text-align: justify; line-height: 1.8; letter-spacing: -0.65px;}
+
+/* 개인정보 스크롤바 */
+textarea::-webkit-scrollbar {width: 10px;}
+textarea::-webkit-scrollbar-thumb {height: 7.5%; background: #cbcbcb; border-radius: 5px;}
+textarea::-webkit-scrollbar-track {background: #f9f9f9;}
+
+/* 체크박스 디자인 변경 */
+.agree_txt input[type='checkbox'] {display: none;}
+.agree_txt label {position: relative; display: inline-block; margin: 20px 0 0 45px; font-size: 18px; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; cursor: pointer; line-height: 30px;}
+.agree_txt label::after {position: absolute; content: ''; left: -45px; width: 30px; height: 30px; border: 1px solid #ccc; background: url(../img/icon-form-checkbox.jpg) no-repeat -100% 0;}
+.agree_txt input[id="agreeY"]:checked+label::after {background-position: 0 0;}
+.agree_txt label {word-break: keep-all;}
+.agree_txt label>span {margin-left: 1px; color: #00adef;}
+
+/* 문의하기 버튼 */
+.agree_txt button#inquiry {z-index: 1; overflow: hidden; position: relative; margin: 90px 0 190px; width: 200px; height: 50px; font-size: 17px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; border: 1px solid #222; background: #fff;}
+.agree_txt button#inquiry:hover {color: #fff;}
+.agree_txt button#inquiry::after {z-index: -1; position: absolute; content: ''; left: -140%; top: -1px; width: 250px; height: 50px; background: #0056AA; transform: skewX(-40deg); transition: .3s ease;}
+.agree_txt button#inquiry:hover::after {left: -15%;}
+
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 1720px) {
+  /* 파란 원형 전화번호 */
+  .tel_circle::after {display: none;}
+}
+
+@media screen and (max-width: 1110px) {
+  /* 파란 원형 전화번호 */
+  #container .ars_table tbody th {text-align: center;}
+  #container .ars_table tbody td {text-align: center;}
+
+  /* 온라인 문의 */
+  .content_inner fieldset>p>span {word-break: keep-all;}
+  .inquiry_content {display: flex; flex-direction: column;}
+  .agreement {display: flex; flex-direction: column;}
+  #container .agree_txt>textarea {width: 70vw;}
+}
+
+@media screen and (max-width: 1000px) {
+  /* 파란 원형 전화번호 */
+  .division {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 73vw;}
+  #container .ars_table {width: 73vw; margin-top: 50px;}
+  #container .ars_table tbody th {width: 300px;}
+  .ars_table tbody td {width: 700px;}
+
+  /* 파일첨부 */
+  #container .attBtn {transform: translateX(-22px);}
+
+  /* 개인정보 동의 */
+  #container .agree_txt>textarea {width: 72vw;}
+}
+
+@media screen and (max-width: 768px) {
+  /* content */
+  /* content_inner */
+
+  /* 온라인 문의 */
+  .content_inner fieldset>p {display: flex; flex-direction: column; word-break: keep-all;}
+  #container .inquiry_form ul li:first-of-type {min-width: 125px;}
+
+  /* 휴대폰 */
+  #container .inquiry_form ul:nth-of-type(3) a {display: inline-block; padding: 10px 5px; min-width: 60px; font-size: 12px; color: #ccc; background: #f9f9f9; border: 1px solid #ccc; box-sizing: border-box; text-align: center; word-break: keep-all; transform: translateX(-26px);}
+
+  /* 이메일 */
+  #container .inquiry_form ul:nth-of-type(4) li:nth-child(2)>input[type="text"] {width: 25vw; vertical-align: baseline;}
+  #container .inquiry_form ul:nth-of-type(4) li:nth-child(2)>select {min-width: 100px; font-size: 14px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+
+  /* 파일첨부 */
+  #container .attBtn {display: inline-block; width: 80px; height: 60px; background: #fff; font-size: 14px; font-weight: 500; border: 1px solid #222; text-align: center; line-height: 60px; transform: translateX(-18px);}
+  
+  /* 개인정보 수집동의 */
+  .agreement>h4 {margin-bottom: 20px;}
+  #container .agree_txt>textarea {width: 75vw;}
+}
+
+
+
+
+
+
+
