@@ -41,7 +41,7 @@ li:nth-of-type(6)>.sub_menu>ul>li {transform: translateX(135px);}
 .top_menu>div a {display: block; padding: 5px 15px; font-size: 14px; color: #fff; line-height: 1.52;}
 .top_menu>div a i {display: none;}
 .top_menu>div:nth-of-type(1) {margin-right: 10px;}
-.top_menu>div:nth-of-type(2)>a>span {margin-right: 5px; vertical-align:auto; line-height: 14px;}
+.top_menu>div:nth-of-type(2)>a>span {margin-right: 5px; vertical-align:middle; line-height: 14px;}
 .top_menu>div:last-of-type {display: none;}
 
 /* 미디어 쿼리 */
@@ -75,7 +75,7 @@ li:nth-of-type(6)>.sub_menu>ul>li {transform: translateX(135px);}
   #header.on {background: #fff; border-bottom: 1px solid #ddd;}
   #header.active {height: 0}
   #header.on .gnb>ul>li>a {color: #222;}
-  #header.on .top_menu>div>a {padding: 5px 5px; border-radius: none; color: #fff;}
+  #header.on .top_menu>div>a {padding: 5px 5px; border-radius: 0; color: #fff;}
   .header_inner {display: flex; justify-content: space-between; align-items: center;}
   
   /* 로고 */

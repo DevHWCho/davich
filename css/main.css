@@ -283,7 +283,7 @@ div.hearing_aid {animation: fadein 1.5s ease 0.9s;}
 #container .store_banner_wrap {display: flex; width: 1100%; height: 240px;}
 .store_banner_wrap>li {position: relative; width: 100%; /*width: 35.25vw;*/ /*min-width: 72.25vmin;*/ height: 240px; background: url(../img/img-grand-open.png) no-repeat 15% 0;}
 
-.store_banner_wrap div {position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: left; right: 0; width: 310px; height: 100%; padding-left: 50px; text-shadow: 1px 1px 10px #0056AA;}
+.store_banner_wrap div {position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; right: 0; width: 310px; height: 100%; padding-left: 50px; text-shadow: 1px 1px 10px #0056AA;}
 .store_banner_wrap div>h3 {font-size: 4.0rem; font-weight: 700; color: #fff; background-color: rgba(0,58,112,0.5);}
 .store_banner_wrap div>h3.long_txt {font-size: 3.0rem;}
 .store_banner_wrap div>p {background-color: rgba(0,58,112,0.5); font-size: 2.2rem; font-family: 'Noto Sans KR', sans-serif; font-weight: 700; color: #fff;}
