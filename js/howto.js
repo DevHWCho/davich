@@ -38,15 +38,15 @@ window.addEventListener('scroll',e=>{
   scrollY = window.pageYOffset;
   if(scrollY>100 && scrollY <= 800){
     contents[0].classList.add('on')
-    contents[3].classList.remove('on')
+    // contents[3].classList.remove('on')
   }else if(scrollY>800 && scrollY <= 1600){
-    contents[0].classList.remove('on')
+    // contents[0].classList.remove('on')
     contents[1].classList.add('on')
   }else if(scrollY>2100 && scrollY <= 2400){
-    contents[1].classList.remove('on')
+    // contents[1].classList.remove('on')
     contents[2].classList.add('on')
   }else if(scrollY>3600 && scrollY <= 4000){
-    contents[2].classList.remove('on')
+    // contents[2].classList.remove('on')
     contents[3].classList.add('on')
   }
 })

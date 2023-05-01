@@ -263,10 +263,10 @@ div.hearing_aid {animation: fadein 1.5s ease 0.9s;}
 
 /* ############################## content7 ############################## */
 .content7 {width: calc(100vw - (100vw - 100%));}
-.content7>.content_inner {/*overflow: hidden;*/ display: flex; flex-wrap: wrap; justify-content: space-between; width: 73vw; /*height: calc(50vh - 40px);*/ margin: 0 auto; padding: 0 0 70px; box-sizing: border-box;}
+.content7>.content_inner {/*overflow: hidden;*/ display: flex; justify-content: space-between; width: 73vw; gap: 1.25vw; /*height: calc(50vh - 40px);*/ margin: 0 auto; padding: 0 0 70px; box-sizing: border-box;}
 .content7>.content_inner>div {overflow: hidden;}
 .davich_news {position: relative; width: 35.25vw; min-width: 72.25vmin;}
-.newly_opened_store {position: relative; width: 100%; width: 35.25vw; min-width: 72.25vmin;}
+.newly_opened_store {position: relative; width: 35.25vw; min-width: 72.25vmin;}
 
 /* 다비치 소식 본문 */
 .content7>.content_inner>div>h2 {padding: 40px 0 4vmin; font-size: calc(1.8rem + 1.8vmin); font-weight: 800; line-height: 1;}
@@ -294,6 +294,28 @@ div.hearing_aid {animation: fadein 1.5s ease 0.9s;}
 
 
 /* 미디어 쿼리 */
+@media screen and (max-width: 1600px) {
+  /* content7 */
+  div.content7 > .content_inner {flex-wrap: wrap;}
+  div.content7 > .content_inner > div {min-width: 30vw;}
+}
+
+@media screen and (max-width: 1410px) {
+  div.content7 > .content_inner > div {min-width: 49vw; margin-left: 50%; transform: translateX(-50%);}
+}
+
+@media screen and (max-width: 1000px) {
+  div.content7 > .content_inner > div {min-width: 70vw;}
+}
+
+@media screen and (max-width: 876px) {
+  .content6 > div> section > div {min-width: 320px; margin-left: 50%; transform: translateX(-50%);}
+}
+
+@media screen and (max-width: 850px) {
+  div.content7 > .content_inner > div {min-width: 73vw;}
+}
+
 @media screen and (max-width: 768px) {
   /* content3 */
   #container .content3>div>img {opacity: 0.5; filter: contrast(1.1);}
