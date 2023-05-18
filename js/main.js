@@ -124,7 +124,6 @@ function scrollToPosition(index) {
   }
 }
 window.addEventListener('wheel', e => {
-  e.preventDefault();
   if (e.deltaY > 0 && currentIndex < scrollPositions.length - 1) {
     currentIndex++;
     scrollToPosition(currentIndex);
