@@ -170,6 +170,37 @@ textarea::-webkit-scrollbar-track {background: #f9f9f9;}
   #container .agree_txt>textarea {width: 75vw;}
 }
 
+@media screen and (max-width: 450px) {
+  .spot_txt>h2 {font-size: 50px;}
+
+  /* 파랑 원형 전화번호 */
+  .tel_circle {width: 250px; height: 250px;}
+  #container .tel_circle>div>strong {font-size: 30px;}
+
+  /* 온라인 문의 */
+  .inquiry_content {margin: 100px 0 70px;}
+
+  /* 문의내용 */
+  /* 왼쪽 타이틀 */
+  .inquiry_form ul li:first-of-type {min-width: 70px !important; font-size: 18px; line-height: 65px;}
+  .content .inquiry_form ul li input::placeholder, .content .inquiry_form ul li textarea::placeholder {font-size: 14px;}
+
+  /* 구분선 */
+  .inquiry_form ul:nth-of-type(1) li:nth-child(2) > select {width: 55vw; font-size: 16px !important;}
+
+  .inquiry_form ul:nth-of-type(2) li:nth-child(2), .inquiry_form ul:nth-of-type(3) li:nth-child(2), .inquiry_form ul:nth-of-type(4) li:nth-child(2) {width: 55vw;}
+
+  /* 휴대폰 */
+  #container .inquiry_form ul:nth-of-type(3) a {transform: translateX(-15px);}
+
+  /* 개인정보 수집 체크박스 */
+  .agree_txt label {font-size: 14px; line-height: 20px;}
+  .agree_txt label::after {top: 0;}
+
+  /* 문의하기 버튼 */
+  .agree_txt button#inquiry {left: 50%; margin: 40px 0 100px; transform: translateX(-50%);}
+}
+
 
 
 

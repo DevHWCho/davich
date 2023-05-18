@@ -332,6 +332,16 @@ div.hearing_aid {animation: fadein 1.5s ease 0.9s;}
   #container .content4 .content_text>h2 {display: flex; flex-direction: row; justify-content: right;}
 }
 
+@media screen and (max-width: 490px) {
+  .slide_txt {width: 60vw; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+  .main_bnn_txt {font-size: calc(1.2rem + 1.2vmin);}
+
+  /* 슬라이드 버튼 */
+  .slide_arrow {width: 100vw;}
+
+  /* 슬라이드 번호 선택 */
+  .slide_control {left: 9.5%;}
+}
 
 
 
