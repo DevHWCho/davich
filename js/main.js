@@ -30,6 +30,7 @@ let bnnNum = 0;
 const lastNum = slide.length - 1;
 let currentVideo;
 let vidDuration = 0;
+
 function loadVideoAndPlayNextSlide() {
   bnnNum++;
   if (bnnNum > lastNum) bnnNum = 0;
@@ -38,25 +39,27 @@ function loadVideoAndPlayNextSlide() {
   currentVideo = slide[bnnNum].querySelector("video");
   vidDuration = currentVideo.duration;
   progressBar[bnnNum].style.transition = `width ${vidDuration}s linear`;
-  // 다음 슬라이드 비디오를 로드하고 미리 재생
-  const nextVideo = slide[bnnNum + 1] ? slide[bnnNum + 1].querySelector('video') : slide[0].querySelector('video');
-  nextVideo.load();
-  nextVideo.play();
+
+  // Play current video
+  currentVideo.play();
+
   autoMBnn = setTimeout(loadVideoAndPlayNextSlide, vidDuration * 1000);
 }
+
 function autoMainBanner() {
-  // 첫 번째 슬라이드 비디오를 로드하고 재생
+  // Play first video
   currentVideo = slide[bnnNum].querySelector("video");
   vidDuration = currentVideo.duration;
   progressBar[bnnNum].style.transition = `width ${vidDuration}s linear`;
-  currentVideo.load();
+
+  // Play current video
   currentVideo.play();
-  // 다음 슬라이드 비디오를 미리 로드
-  const nextVideo = slide[bnnNum + 1] ? slide[bnnNum + 1].querySelector('video') : slide[0].querySelector('video');
-  nextVideo.load();
+
   autoMBnn = setTimeout(loadVideoAndPlayNextSlide, vidDuration * 1000);
 }
+
 autoMainBanner();
+
 
 
 // 비디오 재생/멈춤
