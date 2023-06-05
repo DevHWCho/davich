@@ -30,7 +30,6 @@ let bnnNum = 0;
 const lastNum = slide.length - 1;
 let currentVideo;
 let vidDuration = 0;
-
 function loadVideoAndPlayNextSlide() {
   bnnNum++;
   if (bnnNum > lastNum) bnnNum = 0;

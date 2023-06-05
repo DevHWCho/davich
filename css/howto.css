@@ -260,8 +260,21 @@
 }
 
 @media screen and (max-width: 450px) {
+  /* ############################## spot ############################## */
+  .spot_txt>h2 {font-size: 50px;}
+
+  /* content2 - 점포모델 */
+  .content2 > .content_inner {margin-left: 7vw;}
+  .content2 .section1 > h3 {font-size: 30px;}
+  .content2 .section1 > p {font-size: 14px;}
+
   /* 점포모델 */
   .store_model {bottom: -35%; left: -25%; transform: scale(0.4);}
+
+  /* section2 - 오토배너 파트 */
+  .section2>ul {display: flex; transition: all 1s ease 0s;}
+  .section2>ul>li {margin-right: 40px; text-indent: -25%;}
+  .section2>ul>li>p {margin-top: 20px; font-size: 22px; font-weight: 500;}
 
   /* content3 - 개설절차 */
   /* section1 텍스트 */
@@ -269,9 +282,9 @@
 
   /* section2 개설절차 원형 */
   .con3_section2 {column-gap: 20px;}
-  #container .con3_section2>section>p {width: 120px; height: 120px; font-size: 1.8rem;}
+  #container .con3_section2>section>p {width: 120px; height: 120px; margin-bottom: 10px; font-size: 1.8rem;;}
   .con3_section2>section::after {top: 50px;}
-  .con3_section2>section>span {display: inline; width: 120px; letter-spacing: -1.8px;}
+  .con3_section2>section>span {display: inline-block; width: 120px; letter-spacing: -1.8px; margin-bottom: 20px; word-break: keep-all;}
 
   /* 오픈 가능 지역 */
   .city>table>tbody>tr>td {flex-grow: 1; width: 110px;}
@@ -281,3 +294,7 @@
 }
 
 /* .location {display: none;} */
+
+@media screen and (max-width:490px) {
+
+}
