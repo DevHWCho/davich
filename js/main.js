@@ -24,27 +24,46 @@ let activation2 = (index) => {
 }
 
 // #################### 오토배너 ##############################
-const progressBar = document.querySelectorAll('span.progress_bar')
-// let autoMBnn;
-var bnnNum = 0;
-var lastNum = slide.length-1;
-// var currentVideo = slide[bnnNum].querySelector("video")
-var vidDuration=0;
+const progressBar = document.querySelectorAll('span.progress_bar');
+let autoMBnn;
+let bnnNum = 0;
+const lastNum = slide.length - 1;
+let currentVideo;
+let vidDuration = 0;
 
-// 현재 슬라이드 비디오 플레이 타임이 끝나면 다음 슬라이드 비디오 플레이
-function autoMainBanner(){
+function loadVideoAndPlayNextSlide() {
   bnnNum++;
-  if(bnnNum > lastNum) bnnNum = 0;
+  if (bnnNum > lastNum) bnnNum = 0;
   activation(slide, bnnNum);
   activation(slideBtns, bnnNum);
-  slide[bnnNum].querySelector('video').addEventListener("loadedmetadata", ()=>{
-    currentVideo = slide[bnnNum].querySelector("video");
-    vidDuration = currentVideo.duration;
-  })
-  progressBar[bnnNum].style.transition =  `width ${vidDuration}s linear`;
-  autoMBnn = setTimeout(autoMainBanner, vidDuration * 1000);
+  currentVideo = slide[bnnNum].querySelector("video");
+  vidDuration = currentVideo.duration;
+  progressBar[bnnNum].style.transition = `width ${vidDuration}s linear`;
+
+  // 다음 슬라이드 비디오를 로드하고 미리 재생
+  const nextVideo = slide[bnnNum + 1] ? slide[bnnNum + 1].querySelector('video') : slide[0].querySelector('video');
+  nextVideo.load();
+  nextVideo.play();
+
+  autoMBnn = setTimeout(loadVideoAndPlayNextSlide, vidDuration * 1000);
 }
-let autoMBnn = setTimeout(autoMainBanner, vidDuration * 1000);
+
+function autoMainBanner() {
+  // 첫 번째 슬라이드 비디오를 로드하고 재생
+  currentVideo = slide[bnnNum].querySelector("video");
+  vidDuration = currentVideo.duration;
+  progressBar[bnnNum].style.transition = `width ${vidDuration}s linear`;
+  currentVideo.load();
+  currentVideo.play();
+
+  // 다음 슬라이드 비디오를 미리 로드
+  const nextVideo = slide[bnnNum + 1] ? slide[bnnNum + 1].querySelector('video') : slide[0].querySelector('video');
+  nextVideo.load();
+
+  autoMBnn = setTimeout(loadVideoAndPlayNextSlide, vidDuration * 1000);
+}
+
+autoMainBanner();
 
 
 // 비디오 재생/멈춤
@@ -99,35 +118,37 @@ slideBtns.forEach((slideBtn, i)=>{
 
 
 // 원스크롤 페이지
-// const scrollPositions = document.querySelectorAll('.scroll-position');
-// const footer = document.querySelector('#footer')
-// // console.log(scrollPositions)
+const scrollPositions = document.querySelectorAll('.scroll-position');
+const footer = document.querySelector('#footer');
 
-// for(i=0; i<scrollPositions.length-1; i++){
-//   var scrollPos = scrollPositions[i].offsetTop;
-//   // console.log(scrollPos)
-  
-// }
-// i=0;
-// let lastIdx = scrollPositions.length-1;
-// console.log(lastIdx)
-// window.addEventListener('wheel',e=>{
-//   i++;
-//   if(e.deltaY > 0 && i<=lastIdx){
-//     window.scroll({
-//       top: scrollPositions[i].offsetTop - window.innerHeight,
-//       left: 0,
-//       behavior: 'smooth'
-//     })
-//   }
-//   if(i>lastIdx){
-//     window.scroll({
-//       top: footer.offsetTop,
-//       left: 0,
-//       behavior: 'smooth'
-//     })
-//   }
-// })
+let currentIndex = 0;
+
+function scrollToPosition(index) {
+  if (index >= 0 && index < scrollPositions.length) { // Check if index is within valid range
+    window.scroll({
+      top: scrollPositions[index].offsetTop - window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+}
+
+window.addEventListener('wheel', e => {
+  e.preventDefault();
+  if (e.deltaY > 0 && currentIndex < scrollPositions.length - 1) {
+    currentIndex++;
+    scrollToPosition(currentIndex);
+  } else if (e.deltaY < 0 && currentIndex > 0) {
+    currentIndex--;
+    scrollToPosition(currentIndex);
+  } else if (currentIndex === scrollPositions.length - 1) {
+    window.scroll({
+      top: footer.offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+});
 
 // content7 오토배너
 let storeBnn = document.querySelector(".store_banner_wrap");
